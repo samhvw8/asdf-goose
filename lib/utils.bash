@@ -75,6 +75,7 @@ function download_release() {
   if ! curl "${curl_opts[@]}" -o "${download_path}/${release}" -C - "${url}"; then
     fail "Could not download ${url}"
   fi
+  mv "${download_path}/${release}" "${download_path}/${TOOL_NAME}" 
 }
 
 function install_version() {
