@@ -44,7 +44,7 @@ asdf install goose latest
 asdf global goose latest
 
 # Now goose commands are available
-goose -v
+goose -version
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
