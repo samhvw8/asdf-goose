@@ -5,7 +5,7 @@ set -euo pipefail
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for goose.
 GH_REPO="https://github.com/pressly/goose"
 TOOL_NAME="goose"
-TOOL_TEST="goose -v"
+TOOL_TEST="goose -version"
 
 fail() {
   echo -e "asdf-$TOOL_NAME: $*"
