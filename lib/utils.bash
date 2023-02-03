@@ -99,8 +99,8 @@ function install_version() {
     if [[ ! -x "${install_path}/${TOOL_NAME}" ]]; then
       fail "Expected ${install_path}/${TOOL_NAME} to be executable."
     fi
-    if ! "${install_path}/${TOOL_TEST}"; then
-      fail "'${TOOL_TEST}' failed."
+    if ! "${install_path}/${TOOL_NAME}" -version; then
+      fail "'${TOOL_NAME} -version' failed."
     fi
 
     echo "${TOOL_NAME} ${version} installation was successful!"
