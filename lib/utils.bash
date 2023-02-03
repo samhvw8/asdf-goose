@@ -94,10 +94,10 @@ function install_version() {
     mkdir -p "${install_path}"
 
     mv "${download_path}/${TOOL_NAME}" "${install_path}"
+    chmod +x "${install_path}/${TOOL_NAME}"
 
-    tool_cmd="$(echo "${TOOL_TEST}" | cut -d' ' -f1)"
-    if [[ ! -x "${install_path}/${tool_cmd}" ]]; then
-      fail "Expected ${install_path}/${tool_cmd} to be executable."
+    if [[ ! -x "${install_path}/${TOOL_NAME}" ]]; then
+      fail "Expected ${install_path}/${TOOL_NAME} to be executable."
     fi
     if ! "${install_path}/${TOOL_NAME}" version; then
       fail "'${tool_cmd} version' failed."
